@@ -25,7 +25,9 @@
      * Prevent players from arbitrarily changing scores without transparency.
    * 
    * **SOLUTION**
-     * Use pb sub system so that every time a user in the top 10 has a change in score, the publisher can notify all subscribers (players).Use pb sub system so that every time a user in the top 10 has a change in score, the publisher can notify all subscribers (players). Use the web socket library to send scoreboard information to the player
+     * in client, must check the new score is in the high score range.
+     * Use pubisher/subcriber system so that every time a user in the top 10 has a change in score, the publisher can notify all subscribers (players).Use pb sub system so that every time a user in the top 10 has a change in score, the publisher can notify all subscribers (players). Use the web socket library to send scoreboard information to the player.
+     
      * Every time the game starts, create a token for the user and after the game is finished, if you want to update the score, you must authenticate the token. Helps avoid bad players spamming unclear scores.
    
     * **HIGH LEVEL DESIGN**
