@@ -11,11 +11,11 @@
    * can run the todo list page in ./frontend/todolist.html
    * As for the interface, I don't pay much attention to it, instead, I work on the backend as carefully as possible.
    * All requests have been completed.
- * problem 6: Architecture
+ * **problem 6: Architecture**
    * Let's say I have an online dancing game, after each play, the player's score is updated.
      Rankings are updated live for other players to know. Below is the high level design for this dancing game.
    * Assuming that we have a complete login logout system, users are separate with id. when accessing the scoreboard. means the user is valid.
-   * PROCESS:
+   * **PROCESS**:
      * Start designing high level design. Focus and imagine on real business logic. Then design the necessary APIs to display scoreboards, increase scores, and prevent users from arbitrarily increasing scores.
      * Find ways to continuously update the scoreboard to achieve the highest efficiency, avoiding continuous queries.
      * Start implementing low level design and finish the project.
