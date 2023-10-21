@@ -43,7 +43,7 @@ function fetchData() {
             switch (_a.label) {
                 case 0:
                     _a.trys.push([0, 3, , 4]);
-                    return [4 /*yield*/, fetch('http://localhost:3000/getAllTask')];
+                    return [4 /*yield*/, fetch('/getAllTask')];
                 case 1:
                     response = _a.sent();
                     if (!response.ok) {
@@ -80,7 +80,7 @@ function deleteTask(title, index) {
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    apiUrl = "http://localhost:3000/deleteTaskByTitle?title=".concat(title);
+                    apiUrl = "/deleteTaskByTitle?title=".concat(title);
                     _a.label = 1;
                 case 1:
                     _a.trys.push([1, 3, , 4]);
@@ -122,7 +122,7 @@ function updateTask(id, index) {
                     if (value.value === "on") {
                         isDone = true;
                     }
-                    apiUrl = "http://localhost:3000/updateStateTask/".concat(id);
+                    apiUrl = "/updateStateTask/".concat(id);
                     _a.label = 1;
                 case 1:
                     _a.trys.push([1, 3, , 4]);
@@ -159,7 +159,7 @@ function insertTask() {
                     alert("here");
                     taskNameElement = document.getElementById("taskInput");
                     projectNameElement = document.getElementById("nameProject");
-                    apiUrl = "http://localhost:3000/createTask";
+                    apiUrl = "/createTask";
                     _a.label = 1;
                 case 1:
                     _a.trys.push([1, 4, , 5]);

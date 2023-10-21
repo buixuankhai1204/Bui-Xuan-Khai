@@ -2,7 +2,7 @@ import {Task} from "./tasks";
 
 async function fetchData() {
     try {
-        const response = await fetch('http://localhost:3000/getAllTask');
+        const response = await fetch('/getAllTask');
 
         if (!response.ok) {
             throw new Error(`API request failed with status: ${response.status}`);
@@ -36,7 +36,7 @@ function renderTasks(tasks: Task[]) {
 }
 
 async function deleteTask(title, index) {
-    const apiUrl = `http://localhost:3000/deleteTaskByTitle?title=${title}`; // Replace with the actual API endpoint
+    const apiUrl = `/deleteTaskByTitle?title=${title}`; // Replace with the actual API endpoint
 
     try {
         const data = {
@@ -66,7 +66,7 @@ async function updateTask(id, index) {
     if (value.value === "on") {
         isDone = true;
     }
-    const apiUrl = `http://localhost:3000/updateStateTask/${id}`; // Replace with the actual API endpoint
+    const apiUrl = `/updateStateTask/${id}`; // Replace with the actual API endpoint
     try {
         const response = await fetch(apiUrl, {
             method: 'PUT',
@@ -90,7 +90,7 @@ async function insertTask() {
     alert("here");
     var taskNameElement = document.getElementById("taskInput") as HTMLInputElement;
     var projectNameElement = document.getElementById("nameProject") as HTMLInputElement;
-    const apiUrl = `http://localhost:3000/createTask`; // Replace with the actual API endpoint
+    const apiUrl = `/createTask`; // Replace with the actual API endpoint
     try {
         const response = await fetch(apiUrl, {
             method: 'POST',
