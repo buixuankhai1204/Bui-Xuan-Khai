@@ -22,6 +22,7 @@ module.exports = class todoListService {
 
     static async updateUserScore(userId, newTopScore, token, next) {
         const match = await matchModel.find({userId: userId});
+        console.log(match);
         if (match[0].token !== token) {
             return next(new AppError('you must complete the game!', 401));
         }
@@ -52,13 +53,13 @@ module.exports = class todoListService {
     }
 
     static async gameStart(userId, next) {
-        console.log(userId)
         var token = crypto.randomBytes(64).toString('hex');
-
-        const match = await matchModel.findOneAndUpdate({userId: userId}, {token: token}, {upsert: true});
+        const match = await matchModel.findOneAndUpdate({userId: userId}, {token: token}, {upsert: true, new: true});
         if (!match) {
             return next(new AppError('can not update task by this id', 401));
         }
+
+        return match;
     }
 
 }
