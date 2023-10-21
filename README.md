@@ -1,6 +1,7 @@
 # backend-test
- - POSTMAN list API :https://warped-spaceship-312404.postman.co/workspace/My-Workspace~bd0c9db2-de5c-4f9b-855c-d78491da1dea/collection/12911345-ac23971c-de04-4399-bc7c-968ec24acd0f?action=share&creator=12911345&active-environment=12911345-278e5cd6-6c16-4b9b-8989-889b567bd9aa
- - data files export in ./database .
+- POSTMAN list API :https://warped-spaceship-312404.postman.co/workspace/My-Workspace~bd0c9db2-de5c-4f9b-855c-d78491da1dea/collection/12911345-ac23971c-de04-4399-bc7c-968ec24acd0f?action=share&creator=12911345&active-environment=12911345-278e5cd6-6c16-4b9b-8989-889b567bd9aa
+- Unit test: ./unit test
+- data files export in ./database .
  - database config in config.env file.
  - Run server: node server.js
  - I use both projects in one application, especially divided into 2 routers.
